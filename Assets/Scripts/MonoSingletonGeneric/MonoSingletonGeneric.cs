@@ -18,4 +18,5 @@ public class MonoSingletonGeneric<T> : MonoBehaviour where T: MonoSingletonGener
             Destroy(this);
         }
     }
+    
 }
