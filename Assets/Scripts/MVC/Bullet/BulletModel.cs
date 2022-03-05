@@ -2,14 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletModel 
+/// <summary>
+/// This Function stores & is used to reference the data about a Bullet entity.
+/// </summary>
+public class BulletModel
 {
-   public BulletModel(int Damage, int speed)
-   {
-      giveDamage = Damage;
-      bulletSpeed = speed;
-   }
+    public BulletModel(BulletScriptableObject bulletScriptableObject)
+    {
+        BulletType = bulletScriptableObject.bulletType;
+        Damage = bulletScriptableObject.Damage;
+        Speed = bulletScriptableObject.speed;
+    }
 
-   public int giveDamage { get; private set; }
-   public int bulletSpeed { get; private set; }
+    public BulletType BulletType { get; }
+    public int Damage { get; }
+    public float Speed { get; }
 }
